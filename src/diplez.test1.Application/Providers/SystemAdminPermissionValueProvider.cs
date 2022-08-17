@@ -32,6 +32,7 @@ namespace diplez.test1.Providers
 
         public override Task<MultiplePermissionGrantResult> CheckAsync(PermissionValuesCheckContext context)
         {
+            //var permissionNames = context.Permissions.Select(x => x.Name).ToArray();
             var permissionNames = "AbpIdentity.Users,AbpIdentity.Users.ManagePermissions,AbpIdentity.Users.Create,AbpIdentity.Users.Update,AbpIdentity.Users.Delete".Split(",").ToArray();
 
             /**if (CheckAsync(context.Principal))
